@@ -6,6 +6,7 @@ readme = "README.md"
 requires-python = ">=3.14"
 dependencies = [
     "catboost>=1.2.10",
+    "imblearn>=0.0",
     "interpret>=0.7.8",
     "ipykernel>=7.2.0",
     "kagglehub>=1.0.1",
