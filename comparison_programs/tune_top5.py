@@ -96,7 +96,7 @@ def tune_top5(results: dict, df: DataFrame, features: list):
     3. Plot comparison
     """
     # ── step 1: pick top 5 ────────────────────────────────────────────────────
-    sorted_models = sorted(results.items(), key=lambda x: x[1]["test_f1"], ascending=False)
+    sorted_models = sorted(results.items(), key=lambda x: x[1]["test_f1"], reverse=True)
     top5          = [name for name, _ in sorted_models[:5]]
 
     print("Top 5 models by F1:")

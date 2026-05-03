@@ -11,9 +11,7 @@ class SVRModel(RegressionModel):
         self.model = make_pipeline(StandardScaler(), SVR(kernel='rbf', C=100, gamma=0.1, epsilon=.1))
 
     def fit(self) -> None:
-       
-
         self.model.fit(self.X_train, self.y_train)
 
     def predict(self, X_test: np.ndarray) -> np.ndarray:
-        return self.model.predict(self.X_train)
+        return self.model.predict(X_test)
